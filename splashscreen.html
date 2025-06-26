@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>dishfeversplashscreen</title>
+<link rel="stylesheet" href="style.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-custom.css" rel="stylesheet" >
+<link href="css/style.css" rel="stylesheet" >
+
+
+</head>
+
+<style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .splash-screen {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .logo {
+      max-width: 80%;
+      height: auto;
+    }
+  </style>
+
+<body>
+
+  <div class="splash-screen">
+    <img src="img/LogoDishFeverDEF.png" alt="Dish Fever Logo" class="logo">
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+  <script src="js/bootstrap.min.js"></script> 
+  <script>
+    $(document).ready(function () {
+      setTimeout(function () {
+        $(".splash-screen").fadeOut(1000, function () {
+          window.location.href = "loginintroscreen.html";
+        });
+      }, 9000);
+    });
+  </script>
+
+</body>
+</html>

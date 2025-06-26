@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>	
+	
+<title>Delete page</title>
+ <link rel="stylesheet" href="style.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-custom.css" rel="stylesheet" >
+<link href="css/style.css" rel="stylesheet" >
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">	
+	
+	
+</head>
+
+<body>
+    
+   <div class="wrapper">
+    <div class="container">
+      <div class="delete-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/1345/1345874.png" alt="Trash Icon">
+      </div>
+
+      <div class="video-thumbnail">
+        <img src="img/boneless.jpg" alt="Video Thumbnail">
+        <div class="play-button"></div>
+      </div>
+
+      <div class="video-meta">
+        <span class="video-title">Title: Cooking Techniques</span>
+        <span class="video-views">👁️ Views: 2,430</span>
+      </div>
+
+      <div class="confirmation-text">
+        ARE YOU SURE YOU WANT <span class="delete-word">TO DELETE</span> THIS VIDEO?
+      </div>
+
+      <div class="buttons">
+        <a href="Yourvideos.html" class="btn btn-back">Go Back</a>
+        <a href="Yourvideos.html" class="btn btn-delete">Delete</a>
+      </div>
+    </div>
+  </div>
+
+    <script>
+        // Agrega dialogo de confirmacion para el boton de delete
+        document.querySelector('.btn-delete').addEventListener('click', function(e) {
+            if(!confirm('Are you absolutely sure you want to delete "Cooking Techniques"? This action cannot be undone.')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+	
+	
+	
+</html>
